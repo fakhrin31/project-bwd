@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="label" data-aos="zoom-in" data-aos-duration="1000">
+                <span>IS</span>
+            </div>
+            <div class="nav-container">
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about-us">About Us</a>
+                    <a href="#catalog">Catalog</a>
+                    <a href="#contact">Contact</a>
+                    <!-- <button id="theme">Dark Mode</button> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="main">
+        <div class="image">
+            <img src="asset/img/shopping.jpg" alt="Store Image">
+        </div>
+        <div class="slogan animated animatedFadeInUp fadeInUp">
+            <h1>"Easy <i>Shopping</i>, Low <i>Price</i>"</h1>
+        </div>
+        <div class="intro">
+            <h1 id="myName">Ini Store</h1>
+            <p id="myDesc">The Elite Store with Best Service.</p>
+        </div>
+    </section>
+    <section class="about-us" id="about-us">
+        <div class="image-store animated animatedFadeInUp fadeInUp">
+            <img src="asset/img/front-store.jpg" alt="">
+        </div>
+        <div class="text-store">
+            <h1>About Us</h1>
+            <p>IS Store offers a modern and comfortable shopping experience with a minimalist Scandinavian design. With touches of white and natural wood, combined with soft and calming lighting, our store provides a clean, organized, and elegant atmosphere.</p>
+            <p><b>Complete & High-Quality Products :</b> From daily necessities and fresh food to carefully selected exclusive products.</p>
+            <p><b>Modern & Comfortable Design :</b> A spacious shopping area with a layout that makes it easy for customers to find their favorite items.</p>
+            <p><b>Friendly & Professional Service :</b> We are ready to assist you with the best service for an enjoyable shopping experience.</p>
+        </div>
+    </section>
+    <section class="catalog" id="catalog">
+        <div class="text-catalog">
+            <h1>Catalog Products</h1>
+        </div>
+        <section class="search-box">
+            <input type="text" id="search" placeholder="Type to search product">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-sort"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a onclick="sortProducts('asc')">Sort by Name: A-Z</a>
+                    <a onclick="sortProducts('desc')">Sort by Name: Z-A</a>
+                </div>
+            </div>
+        </section>
+        <section id="productList" class="productList"></section>
+    </section>
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="card">
+                <img src="" style="width:100%" id="productImage">
+                <hr>
+                <div class="container-card">
+                    <h1 id="productName" class="titleModal"></h1>
+                    <p class="priceModal" id="productPrice"></p>
+                    <p id="productDesc" class="descModal"></p>
+                </div>
+            </div>
+        </div>
+      </div>
+    <footer></footer>
+</body>
+<script src="asset/js/script.js"></script>
+</html>
